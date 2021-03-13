@@ -1,5 +1,5 @@
 #!/bin/bash
-cp garageqtpi@pi.service /etc/systemd/system/garageqtpi@${SUDO_USER:-${USER}}.service
-sed -i "s?/home/pi/GarageQTPi?`pwd`?" /etc/systemd/system/garageqtpi@${SUDO_USER:-${USER}}.service
+cp garagepimqtt@pi.service /etc/systemd/system/garagepimqtt@${SUDO_USER:-${USER}}.service
+sed -i "s?/home/pi/GaragePiMQTT?`pwd`?" /etc/systemd/system/garagepimqtt@${SUDO_USER:-${USER}}.service
 systemctl --system daemon-reload
-systemctl enable garageqtpi@${SUDO_USER:-${USER}}.service
+systemctl enable garagepimqtt@${SUDO_USER:-${USER}}.service
